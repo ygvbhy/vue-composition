@@ -1,24 +1,13 @@
 # vue-composition
 
-## Project setup
-```
-npm install
-```
+## Vue.js composition API tutorial
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+인프런 캡틴판교 Vue.js 중급 강의 Composition API 학습
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 링크
 
-### Lints and fixes files
-```
-npm run lint
-```
+[캡틴판교 인프런](https://www.inflearn.com/course/vue-3-%EC%A4%91%EA%B8%89-composition-api/dashboard).
 
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
