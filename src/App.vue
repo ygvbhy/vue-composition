@@ -1,18 +1,13 @@
 <template>
-  <div>
-    <p>{{ message }}</p>
-    <button @click="changeMessage">change</button>
-  </div>
+  <todo-header></todo-header>
+  <div></div>
 </template>
 
 <script>
-import { useMessage } from "./hooks/useMessage";
-
+import TodoHeader from "./components/TodoHeader.vue";
 export default {
-  setup() {
-    const { message, changeMessage } = useMessage();
-
-    return { message, changeMessage };
+  components: {
+    TodoHeader,
   },
 };
 </script>
