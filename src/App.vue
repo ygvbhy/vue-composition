@@ -6,16 +6,19 @@
 </template>
 
 <script>
+import { ref } from "vue";
+
 export default {
-  data() {
-    return {
-      message: "hello",
-    };
-  },
-  methods: {
-    changeMessage() {
-      this.message = "hi";
-    },
+  setup() {
+    // data
+    const message = ref("hello");
+
+    // methods
+    function changeMessage() {
+      message.value = "hi";
+    }
+
+    return { message, changeMessage };
   },
 };
 </script>
