@@ -1,6 +1,6 @@
 <template>
   <todo-header></todo-header>
-  <todo-input></todo-input>
+  <todo-input @add="addTodo"></todo-input>
   <todo-list :todoItems="todoItems"></todo-list>
 </template>
 
@@ -30,7 +30,12 @@ export default {
 
     todoItems.value = fetchTodos();
 
-    return { todoItems };
+    function addTodo(todo) {
+      todoItems.value.push(todo);
+      localStorage.setItem(todo, todo);
+    }
+
+    return { todoItems, addTodo };
   },
 };
 </script>
