@@ -1,7 +1,7 @@
 <template>
   <todo-header></todo-header>
   <todo-input @add="addTodo"></todo-input>
-  <todo-list :todoItems="todoItems"></todo-list>
+  <todo-list :todoItems="todoItems" @delete="deleteTodoItem"></todo-list>
 </template>
 
 <script>
@@ -36,6 +36,12 @@ export default {
     }
 
     return { todoItems, addTodo };
+  },
+  methods: {
+    deleteTodoItem(item, index) {
+      this.todoItems.splice(index, 1);
+      localStorage.removeItem(item);
+    },
   },
 };
 </script>
